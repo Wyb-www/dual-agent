@@ -70,7 +70,7 @@ async def lifespan(app: FastAPI):
 # ---- 应用 ----
 
 app = FastAPI(
-    title="Multi-Agent Collab",
+    title="Dual Agent",
     description="Worker + Evaluator 多 Agent 协作系统，基于 LangGraph",
     version="1.0.0",
     lifespan=lifespan,

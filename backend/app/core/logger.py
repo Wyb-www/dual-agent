@@ -5,7 +5,7 @@ import sys
 from pathlib import Path
 
 
-def setup_logger(name: str = "multi-agent-collab", level: str = "INFO") -> logging.Logger:
+def setup_logger(name: str = "dual-agent", level: str = "INFO") -> logging.Logger:
     logger = logging.getLogger(name)
     logger.setLevel(getattr(logging, level.upper(), logging.INFO))
 

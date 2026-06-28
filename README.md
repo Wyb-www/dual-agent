@@ -1,4 +1,4 @@
-# Multi-Agent Collab — 多 Agent 任务协作框架
+# Dual Agent — 多 Agent 任务协作框架
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white" />
@@ -17,7 +17,7 @@
 
 ## 项目简介
 
-Multi-Agent Collab 是一个基于 **LangGraph** 的多 Agent 任务协作系统。核心创新在于引入 **Worker↔Evaluator 自纠正循环**：
+Dual Agent 是一个基于 **LangGraph** 的双 Agent 协作系统。核心创新在于引入 **Worker↔Evaluator 自纠正循环**：
 
 1. **Worker** 接收任务，使用工具执行，给出回复
 2. **Evaluator** 检查 Worker 的输出是否满足用户定义的成功标准
@@ -151,7 +151,7 @@ tools:
 ## 项目结构
 
 ```
-multi-agent-collab/
+dual-agent/
 ├── backend/
 │   ├── app/
 │   │   ├── api/chat.py           # 聊天 API (REST + SSE)
