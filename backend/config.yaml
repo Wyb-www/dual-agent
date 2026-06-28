@@ -1,0 +1,33 @@
+app:
+  name: "Multi-Agent Collab"
+  version: "1.0.0"
+  debug: false
+
+llm:
+  provider: "ollama"             # deepseek / openai / ollama
+  model: "qwen3:8b"
+  api_base: "http://localhost:11434"
+  api_key: "ollama"
+  temperature: 0.7
+  max_tokens: 4096
+
+# Fallback / alternative LLM config
+ollama:
+  api_base: "http://localhost:11434"
+  model: "qwen3:8b"
+
+agent:
+  max_iterations: 5              # Max Worker↔Evaluator loops per request
+  success_criteria_default: "给出清晰、准确、有帮助的回答"
+
+tools:
+  # Built-in tools always available: get_time, write_file, execute_python
+  enable_search: false           # Requires SERPER_API_KEY
+  enable_wikipedia: true
+
+server:
+  host: "0.0.0.0"
+  port: 8000
+
+database:
+  path: "./data/conversations.db"
